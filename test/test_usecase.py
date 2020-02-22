@@ -1,7 +1,7 @@
 import pytest
 import sys
 sys.path.append("/home/user/Desktop/TDDQuantityMeasurment/src")
-from quantitymeasurment import FeetUnit
+from quantitymeasurment import FeetUnit,InchUnit
 
 def test_givenZeroFeetAndZeroFeet_whenCompared_thenShouldEqual():
     first_zeroFeet_object = FeetUnit(0) 
@@ -21,3 +21,9 @@ def test_givenStringFeetAndZeroFeet_whenCompared_thenShouldNotEqual():
         string_feet_object = FeetUnit("0")
         zero_feet_object = FeetUnit(0)
         assert string_feet_object != zero_feet_object
+
+
+def test_givenZeroInchAndZeroInch_whenCompared_thenShouldEqual():
+    first_zeroInch_object = InchUnit(0)
+    second_zeroInch_object = InchUnit(0)
+    assert first_zeroInch_object == second_zeroInch_object
