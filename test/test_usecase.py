@@ -34,3 +34,10 @@ def test_givenNoneAndZeroInch_whenCompared_thenShouldNotEqual():
         none_inch_object = None
         zero_inch_object = InchUnit(0)
         assert none_inch_object != zero_inch_object
+
+
+def test_givenStringInchAndZeroInch_whenCompared_thenShouldNotEqual():
+    with pytest.raises(AssertionError) as e:
+        string_inch_object = InchUnit("677")
+        zero_inch_object = InchUnit(0)
+        assert string_inch_object != zero_inch_object
