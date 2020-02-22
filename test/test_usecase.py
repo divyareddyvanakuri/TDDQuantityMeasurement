@@ -14,3 +14,10 @@ def test_givenNoneAndZeroFeet_whenCompared_thenShouldNotEqual():
         none_feet_object = None
         zero_feet_object = FeetUnit(0)
         assert none_feet_object != zero_feet_object
+
+
+def test_givenStringFeetAndZeroFeet_whenCompared_thenShouldNotEqual():
+    with pytest.raises(AssertionError) as e:
+        string_feet_object = FeetUnit("0")
+        zero_feet_object = FeetUnit(0)
+        assert string_feet_object != zero_feet_object
