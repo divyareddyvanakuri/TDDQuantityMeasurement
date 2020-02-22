@@ -22,3 +22,9 @@ class InchUnit:
         if other.value == self.value:
                 return True
         return False 
+
+    def __ne__(self, other):
+        if isinstance(other,self.__class__):
+            if other.value == self.value:
+                return True
+        return False
