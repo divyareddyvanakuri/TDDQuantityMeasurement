@@ -27,3 +27,10 @@ def test_givenZeroInchAndZeroInch_whenCompared_thenShouldEqual():
     first_zeroInch_object = InchUnit(0)
     second_zeroInch_object = InchUnit(0)
     assert first_zeroInch_object == second_zeroInch_object
+
+
+def test_givenNoneAndZeroInch_whenCompared_thenShouldNotEqual():
+    with pytest.raises(AssertionError) as e:
+        none_inch_object = None
+        zero_inch_object = InchUnit(0)
+        assert none_inch_object != zero_inch_object
