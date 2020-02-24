@@ -19,4 +19,4 @@ class InchUnit(Unit):
 # Derived class from base class
 class FeetUnit(Unit):
     def __init__(self):
-        super().__init__(1)
+        super().__init__(12)
