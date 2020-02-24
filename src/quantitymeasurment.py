@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-# Abstract class for Volumes
+# Abstract class for Weights
 class Unit(ABC):
     def __init__(self, conversion_factor):
         self.conversion_factor = conversion_factor
@@ -11,18 +11,18 @@ class Unit(ABC):
 
 
 #Derived class from the base class
-class GallonUnit(Unit):
-    def __init__(self):
-        super().__init__(3.78)
-
-
-#Derived class from the base class
-class LitreUnit(Unit):
+class KgUnit(Unit):
     def __init__(self):
         super().__init__(1)
 
 
 #Derived class from the base class
-class MlUnit(Unit):
+class GramUnit(Unit):
     def __init__(self):
         super().__init__(1/1000)
+
+
+#Derived class from the base class
+class TonneUnit(Unit):
+    def __init__(self):
+        super().__init__(1000)
