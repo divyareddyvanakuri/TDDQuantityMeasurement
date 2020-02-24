@@ -21,4 +21,7 @@ class FeetUnit(Unit):
         super().__init__(12)
 
 
-
+# Derived class from the base class
+class CentiMeterUnit(Unit):
+    def __init__(self):
+        super().__init__(2/5)
