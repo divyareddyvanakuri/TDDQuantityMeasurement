@@ -18,3 +18,7 @@ def test_givenOneFeetAndTwoInch_whenAdded_thenResultShouldInInches():
     assert (one_feet_object + two_inch_object == 14)
 
 
+def test_givenOneFeetAndOneFeet_whenAdded_thenResultShouldInInches():
+    first_one_feet_object = Quantity(1,FeetUnit())
+    second_one_feet_object = Quantity(1,FeetUnit())
+    assert (first_one_feet_object + second_one_feet_object == 24)
