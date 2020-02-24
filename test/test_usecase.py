@@ -23,3 +23,9 @@ def test_givenOneInchAndOneYard_whenCompared_thenShouldNotEqual():
         one_inch_object = Quantity(1,InchUnit()) 
         one_yard_object = Quantity(1,YardUnit())
         assert one_inch_object != one_yard_object
+
+
+def test_givenOneYardAndThirtySix_whenCompared_thenShouldEqual():
+    one_yard_object = Quantity(1,YardUnit())
+    thirtySix_inch_object = Quantity(36,InchUnit()) 
+    assert one_yard_object == thirtySix_inch_object
