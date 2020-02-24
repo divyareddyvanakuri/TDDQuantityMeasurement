@@ -69,3 +69,9 @@ def test_givenOneFeetAndTwelveInch_whenCompared_thenshouldEqual():
     one_feet_object = Quantity(1,FeetUnit())
     twelve_inch_object = Quantity(12,InchUnit())
     assert one_feet_object == twelve_inch_object
+
+
+def test_givenTwelveInchAndOneFeet_whenCompared_thenshouldEqual():
+    twelve_inch_object = Quantity(12,InchUnit())
+    one_feet_object = Quantity(1,FeetUnit())
+    assert  twelve_inch_object == one_feet_object
