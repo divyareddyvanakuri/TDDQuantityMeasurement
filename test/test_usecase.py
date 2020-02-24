@@ -3,7 +3,7 @@ import sys
 sys.path.append("/home/user/Desktop/TDDQuantityMeasurment")
 from main import Quantity
 sys.path.append("/home/user/Desktop/TDDQuantityMeasurment/src")
-from quantitymeasurment import FeetUnit,YardUnit
+from quantitymeasurment import FeetUnit,YardUnit,InchUnit
 
 def test_givenThreeFeetAndOneYard_whenCompared_thenShouldEqual():
     three_feet_object = Quantity(3,FeetUnit()) 
@@ -16,3 +16,10 @@ def test_givenOneFeetAndOneYard_whenCompared_thenShouldNotEqual():
         one_feet_object = Quantity(1,FeetUnit()) 
         one_yard_object = Quantity(1,YardUnit())
         assert one_feet_object != one_yard_object
+
+
+def test_givenOneInchAndOneYard_whenCompared_thenShouldNotEqual():
+    with pytest.raises(AssertionError) as e:
+        one_inch_object = Quantity(1,InchUnit()) 
+        one_yard_object = Quantity(1,YardUnit())
+        assert one_inch_object != one_yard_object
