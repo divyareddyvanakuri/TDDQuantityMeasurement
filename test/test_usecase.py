@@ -52,12 +52,20 @@ def test_givenZeroFeetAndZeroInch_whenCompared_thenShouldEqual():
 
 
 def test_givenOneFeetAndOneInch_whenCompared_thenshouldNotEqual():
-    one_feet_object = Quantity(1,FeetUnit())
-    one_inch_object = Quantity(1,InchUnit())
-    assert one_feet_object != one_inch_object
+    with pytest.raises(AssertionError) as e:
+        one_feet_object = Quantity(1,FeetUnit())
+        one_inch_object = Quantity(1,InchUnit())
+        assert one_feet_object != one_inch_object
 
 
 def test_givenOneInchAndOneFeet_whenCompared_thenshouldNotEqual():
-    one_inch_object = Quantity(1,InchUnit())
+    with pytest.raises(AssertionError) as e:
+        one_inch_object = Quantity(1,InchUnit())
+        one_feet_object = Quantity(1,FeetUnit())
+        assert one_inch_object != one_feet_object
+
+
+def test_givenOneFeetAndTwelveInch_whenCompared_thenshouldEqual():
     one_feet_object = Quantity(1,FeetUnit())
-    assert one_inch_object != one_feet_object
+    twelve_inch_object = Quantity(12,InchUnit())
+    assert one_feet_object == twelve_inch_object
