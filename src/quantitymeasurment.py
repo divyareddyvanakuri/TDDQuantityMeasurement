@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-# Abstract class for length
+# Abstract class for Volumes
 class Unit(ABC):
     def __init__(self, conversion_factor):
         self.conversion_factor = conversion_factor
@@ -10,18 +10,15 @@ class Unit(ABC):
         return value*self.conversion_factor
 
 
-class InchUnit(Unit):
+#Derived class from the base class
+class GallonUnit(Unit):
+    def __init__(self):
+        super().__init__(3.78)
+
+
+#Derived class from the base class
+class LitreUnit(Unit):
     def __init__(self):
         super().__init__(1)
 
 
-# Derived class from the base class
-class FeetUnit(Unit):
-    def __init__(self):
-        super().__init__(12)
-
-
-# Derived class from the base class
-class CentiMeterUnit(Unit):
-    def __init__(self):
-        super().__init__(2/5)
