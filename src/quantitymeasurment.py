@@ -20,3 +20,9 @@ class YardUnit(Unit):
 class FeetUnit(Unit):
     def __init__(self):
         super().__init__(1)
+
+
+# Derived class from base class
+class InchUnit(Unit):
+    def __init__(self):
+        super().__init__(1)
