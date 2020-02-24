@@ -22,3 +22,7 @@ class LitreUnit(Unit):
         super().__init__(1)
 
 
+#Derived class from the base class
+class MlUnit(Unit):
+    def __init__(self):
+        super().__init__(1/1000)
