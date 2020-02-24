@@ -1,30 +1,22 @@
-class FeetUnit:
-    def __init__(self,value):
-        self.value = value
-
-    def __eq__(self, other):
-        if other.value == self.value:
-                return True
-        return False 
-    
-    def __ne__(self, other):
-        if isinstance(other,self.__class__):
-            if other.value == self.value:
-                return True
-        return False
+from abc import ABC, abstractmethod
 
 
-class InchUnit:
-    def __init__(self,value):
-        self.value = value
+# Abstract class for length
+class Unit(ABC):
+    def __init__(self, conversion_factor):
+        self.conversion_factor = conversion_factor
 
-    def __eq__(self, other):
-        if other.value == self.value:
-                return True
-        return False 
+    def comparisons_to_base(self, value):
+        return value*self.conversion_factor
 
-    def __ne__(self, other):
-        if isinstance(other,self.__class__):
-            if other.value == self.value:
-                return True
-        return False
+
+# Derived class from base class
+class InchUnit(Unit):
+    def __init__(self):
+        super().__init__(1)
+
+
+# Derived class from base class
+class FeetUnit(Unit):
+    def __init__(self):
+        super().__init__(1)
