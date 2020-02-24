@@ -12,7 +12,7 @@ def test_givenOneGallonAndThreePointSevenEightLitres_whenCompared_thenShouldEqua
     assert one_gallon_object == three_point_seven_eight_litre_object
 
 
-def test_givenOneLitreAndThousandMl_whenAdded_thenResultShouldInInches():
+def test_givenOneLitreAndThousandMl_whenCompared_thenResultShouldInInches():
     one_litre_object = Quantity(1,LitreUnit())
     thousand_ml_object = Quantity(1000,MlUnit())
     assert one_litre_object  == thousand_ml_object
