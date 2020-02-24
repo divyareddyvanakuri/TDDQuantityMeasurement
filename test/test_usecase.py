@@ -44,9 +44,14 @@ def test_givenStringInchAndZeroInch_whenCompared_thenShouldNotEqual():
         zero_inch_object = Quantity(0,InchUnit())
         assert string_inch_object != zero_inch_object
 
-        
+
 def test_givenZeroFeetAndZeroInch_whenCompared_thenShouldEqual():
     zero_feet_object = Quantity(0,FeetUnit())
     zero_inch_object = Quantity(0,InchUnit())
     assert zero_feet_object == zero_inch_object
 
+
+def test_givenOneFeetAndOneInch_whenCompared_thenshouldNotEqual():
+    one_feet_object = Quantity(1,FeetUnit())
+    one_inch_object = Quantity(1,InchUnit())
+    assert one_feet_object != one_inch_object
