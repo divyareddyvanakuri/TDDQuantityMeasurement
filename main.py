@@ -1,6 +1,6 @@
 import sys
 sys.path.append("/home/user/Desktop/TDDQuantityMeasurment/src")
-from quantitymeasurment import YardUnit,FeetUnit,InchUnit,Unit
+from quantitymeasurment import CentiMeterUnit,InchUnit,Unit
 
 #This is the composition class for feet and inch objects
 class Quantity:
