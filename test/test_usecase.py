@@ -55,3 +55,9 @@ def test_givenOneFeetAndOneInch_whenCompared_thenshouldNotEqual():
     one_feet_object = Quantity(1,FeetUnit())
     one_inch_object = Quantity(1,InchUnit())
     assert one_feet_object != one_inch_object
+
+
+def test_givenOneInchAndOneFeet_whenCompared_thenshouldNotEqual():
+    one_inch_object = Quantity(1,InchUnit())
+    one_feet_object = Quantity(1,FeetUnit())
+    assert one_inch_object != one_feet_object
